@@ -1,10 +1,17 @@
 {
-  "name": "goodday-v3",
+  "name": "goodday-app",
   "version": "3.0.0",
-  "description": "GoodDay - Motivasi Islami Harian (GitHub Pages + API Backend)",
-  "private": true,
   "type": "module",
-  "engines": {
-    "node": "20.x"
+  "description": "Islamic Daily Self Affirmation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["islamic", "motivation", "quran", "hadits"],
+  "author": "firmanahmad-max",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
