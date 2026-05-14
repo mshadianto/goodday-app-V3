@@ -4,10 +4,24 @@ import http from 'http';
 const PORT = process.env.PORT || 3000;
 
 const server = http.createServer(async (req, res) => {
-  // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Set CORS headers - Allow GitHub Pages domain
+  const origin = req.headers.origin || '';
+  const allowedOrigins = [
+    'https://firmanahmad-max.github.io',
+    'https://goodday-app-v3.railway.app',
+    'http://localhost:3000',
+    'http://localhost:5500'
+  ];
+  
+  if (allowedOrigins.includes(origin) || origin.includes('localhost')) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
+  
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS, GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Max-Age', '3600');
 
   // Handle preflight CORS request
   if (req.method === 'OPTIONS') {
