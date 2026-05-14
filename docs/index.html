@@ -381,7 +381,7 @@ async function getMotiv(){
   const controller=new AbortController();
   const timeoutId=setTimeout(()=>{
     controller.abort();
-    console.warn('[GoodDay] Request timeout after 10 seconds');
+    console.warn('[GoodDay] Request timeout after 30 seconds');
   },10000);
   
   const sm={fajr:'Subuh / dini hari',morning:'Pagi hari',noon:'Siang hari',evening:'Malam hari'};
