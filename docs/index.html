@@ -377,11 +377,11 @@ async function getMotiv(){
   document.getElementById('emsg').style.display='none';
   document.getElementById('marea').innerHTML='<div class="ldwrap"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><div class="ldtxt">Memilihkan dari Al-Quran &amp; Hadits...</div></div>';
   
-  // Setup timeout - 10 detik
+  // Setup timeout - 120 detik
   const controller=new AbortController();
   const timeoutId=setTimeout(()=>{
     controller.abort();
-    console.warn('[GoodDay] Request timeout after 10 seconds');
+    console.warn('[GoodDay] Request timeout after 120 seconds');
   },120000); // 120 seconds (2 minutes) timeout - Claude API via Sumopod very slow
   
   const sm={fajr:'Subuh / dini hari',morning:'Pagi hari',noon:'Siang hari',evening:'Malam hari'};
