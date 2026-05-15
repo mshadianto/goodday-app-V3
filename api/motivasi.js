@@ -44,7 +44,7 @@ Pilih 1 ayat Al-Quran ATAU 1 Hadits shahih yang sangat relevan. Balas HANYA dala
 
     console.log('[GoodDay API] Request from', nama, 'dengan mood:', mood, 'waktu:', waktu);
 
-    const response = await fetch('https://api.sumopod.com/v1/messages', {
+    const response = await fetch('https://ai.sumopod.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
