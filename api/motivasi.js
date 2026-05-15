@@ -52,7 +52,7 @@ Pilih 1 ayat Al-Quran ATAU 1 Hadits shahih yang sangat relevan. Balas HANYA dala
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20250909',
+        model: 'claude-haiku-4-5',
         max_tokens: 1000,
         messages: [
           {
