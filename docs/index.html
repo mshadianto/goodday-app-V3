@@ -425,7 +425,7 @@ async function getMotiv(){
     // FIX #4: IMPROVED ERROR MESSAGES
     let errorMsg='';
     if(e.name==='AbortError'){
-      errorMsg='Request timeout. API tidak merespons dalam 10 detik. Cek koneksi atau API backend mungkin sedang down. 🕐';
+      errorMsg='Request timeout. API tidak merespons dalam 120 detik. Cek koneksi atau API backend mungkin sedang down. 🕐';
     }else if(!navigator.onLine){
       errorMsg='Tidak ada koneksi internet. Pastikan WiFi atau data mobile aktif. 🌐';
     }else if(e instanceof TypeError){
