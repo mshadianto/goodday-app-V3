@@ -377,11 +377,11 @@ async function getMotiv(){
   document.getElementById('emsg').style.display='none';
   document.getElementById('marea').innerHTML='<div class="ldwrap"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><div class="ldtxt">Memilihkan dari Al-Quran &amp; Hadits...</div></div>';
   
-  // Setup timeout - 10 detik
+  // Setup timeout - 120 detik
   const controller=new AbortController();
   const timeoutId=setTimeout(()=>{
     controller.abort();
-    console.warn('[GoodDay] Request timeout after 10 seconds');
+    console.warn('[GoodDay] Request timeout after 120 seconds');
   },120000); // 120 seconds (2 minutes) timeout - Claude API via Sumopod very slow
   
   const sm={fajr:'Subuh / dini hari',morning:'Pagi hari',noon:'Siang hari',evening:'Malam hari'};
@@ -425,7 +425,7 @@ async function getMotiv(){
     // FIX #4: IMPROVED ERROR MESSAGES
     let errorMsg='';
     if(e.name==='AbortError'){
-      errorMsg='Request timeout. API tidak merespons dalam 10 detik. Cek koneksi atau API backend mungkin sedang down. 🕐';
+      errorMsg='Request timeout. API tidak merespons dalam 120 detik. Cek koneksi atau API backend mungkin sedang down. 🕐';
     }else if(!navigator.onLine){
       errorMsg='Tidak ada koneksi internet. Pastikan WiFi atau data mobile aktif. 🌐';
     }else if(e instanceof TypeError){
